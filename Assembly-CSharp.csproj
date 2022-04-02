@@ -42,7 +42,11 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\ParallaxScript.cs" />
+     <Compile Include="Assets\Scripts\ParallaxScript.cs" />
+     <Compile Include="Assets\Scripts\TreeSeeder.cs" />
+     <Compile Include="Assets\Scripts\BoncyScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerLifeScript.cs" />
+     <Compile Include="Assets\Scripts\MobLifeScript.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:/Program Files/Unity/Hub/Editor/2021.2.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
