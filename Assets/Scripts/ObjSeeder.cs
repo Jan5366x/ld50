@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TreeSeeder : MonoBehaviour
+public class ObjSeeder : MonoBehaviour
 {
-    public GameObject[] trees;
+    public GameObject[] things;
     public float maxSize = 1f;
     public float minSize = 0.7f;
     public float maxDistance = 2f;
@@ -23,16 +23,16 @@ public class TreeSeeder : MonoBehaviour
             GameObject prefab;
             do
             {
-                prefab = trees[Random.Range(0, trees.Length)];
-            } while (trees.Length > 1 && last == prefab);
+                prefab = things[Random.Range(0, things.Length)];
+            } while (things.Length > 1 && last == prefab);
             
             
-            var tree = Instantiate(prefab, transform);
+            var obj = Instantiate(prefab, transform);
             last = prefab;
-            tree.transform.parent = transform;
+            obj.transform.parent = transform;
             var size = Random.Range(minSize, maxSize);
-            tree.transform.localPosition = new Vector3(currentPos += Random.Range(minDistance, maxDistance), 0f, 0f);
-            tree.transform.localScale = new Vector3(size, size);
+            obj.transform.localPosition = new Vector3(currentPos += Random.Range(minDistance, maxDistance), 0f, 0f);
+            obj.transform.localScale = new Vector3(size, size);
         }
     }
 }
