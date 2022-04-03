@@ -25,9 +25,12 @@ public class BoncyScript : MonoBehaviour
 
     void Update()
     {
-        bool inRange = Vector3.Distance(transform.position, _player.transform.position) <= followRange;
-        bool inCombatRange = inRange && Vector3.Distance(transform.position, _player.transform.position) <= combatRange;
-        Debug.DrawLine(transform.position, _player.transform.position, inCombatRange ? Color.red : inRange ? Color.green : Color.yellow);
+        var position = transform.position;
+        var playerPos = _player.transform.position;
+        bool inRange = Vector3.Distance(position, playerPos) <= followRange;
+        bool inCombatRange = inRange && Vector3.Distance(position, playerPos) <= combatRange;
+        
+        Debug.DrawLine(position, playerPos, inCombatRange ? Color.red : inRange ? Color.green : Color.yellow);
 
         if (inCombatRange)
         {

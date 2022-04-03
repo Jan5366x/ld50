@@ -10,10 +10,7 @@ public class ObjSeeder : MonoBehaviour
     public float maxDistance = 2f;
     public float minDistance = 1f;
     public int amount = 50;
-
-
     
-    // Start is called before the first frame update
     void Start()
     {
         var currentPos = 0f;
